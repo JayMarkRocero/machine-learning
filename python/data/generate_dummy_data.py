@@ -147,7 +147,7 @@ def main():
         echo=False
     )
 
-    print("🥛 Rosario Dairy — Dummy Data Generator")
+    print(" Rosario Dairy — Dummy Data Generator")
     print("=" * 50)
     print(f"   Today:      {TODAY}")
     print(f"   Sales from: {START_DATE} → {END_DATE}")
@@ -221,7 +221,7 @@ def main():
                 production = received - timedelta(days=random.randint(1, 3))
                 expiry     = production + timedelta(days=shelf)
 
-                # ✅ KEY FIX: Determine status based on expiry vs TODAY
+                #  KEY FIX: Determine status based on expiry vs TODAY
                 status, curr_qty = get_batch_status_and_qty(
                     expiry, initial_qty, p["reorder"]
                 )
